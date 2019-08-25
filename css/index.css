@@ -36,8 +36,8 @@ body {
 
 .cl_div_prodcat_cont_wrap {
 	position: relative;
-	width: 150px;
-	height: 150px;
+	width: 125px;
+	height: 125px;
 	margin: 10px auto;
 }
 
@@ -66,8 +66,8 @@ body {
 
 .cl_div_prodlist_cont_wrap {
 	position: relative;
-	width: 150px;
-	height: 150px;
+	width: 125px;
+	height: 125px;
 	margin: 10px auto;
 }
 
@@ -80,7 +80,7 @@ img.cl_img_prodcat {
 	cursor: pointer;
 	border: 3px solid #ffba26;
 	border-radius: 10px;
-	width: 150px;
+	width: 125px;
 	-moz-transition: width 1s;
 	-o-transition: width 1s;
 	-webkit-transition: width 1s;
