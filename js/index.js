@@ -66,7 +66,7 @@ $(document).on('vclick', 'img', function(e) {
 				items = [
 				    {
 				        title: "NK101 (26.255 gms)",
-				        src: "http://localhost:9010/public/jrca/images/productcatalog/cat_neck/NK101.jpg"
+				        src: "http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK101.jpg"
 				    }
 
 				];	
@@ -98,27 +98,27 @@ $(document).on('vclick', 'img', function(e) {
 				items = [
 				    {
 				        title: "NK101 (26.255 gms)",
-				        src: "http://localhost:9010/public/jrca/images/productcatalog/cat_neck/NK101.jpg"
+				        src: "http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK101.jpg"
 				    },
 				    {
 				        title: "NK102 (24.100 gms)",
-				        src: "http://localhost:9010/public/jrca/images/productcatalog/cat_neck/NK102.jpg"
+				        src: "http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK102.jpg"
 				    },
 				    {
 				        title: "NK103 (22.652 gms)",
-				        src: "http://localhost:9010/public/jrca/images/productcatalog/cat_neck/NK103.jpg"
+				        src: "http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK103.jpg"
 				    },
 				    {
 				        title: "NK104 (28.245 gms)",
-				        src: "http://localhost:9010/public/jrca/images/productcatalog/cat_neck/NK104.jpg"
+				        src: "http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK104.jpg"
 				    },
 				    {
 				        title: "NK105 (25.250 gms)",
-				        src: "http://localhost:9010/public/jrca/images/productcatalog/cat_neck/NK105.jpg"
+				        src: "http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK105.jpg"
 				    },
 				    {
 				        title: "NK106 (32.211 gms)",
-				        src: "http://localhost:9010/public/jrca/images/productcatalog/cat_neck/NK106.jpg"
+				        src: "http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK106.jpg"
 				    }
 
 				];	
