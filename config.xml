@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.phonegap.jrjewellersb2bcat.live"
-        versionCode="10001"
-        android-versionCode="10001"
+        id        = "com.phonegap.vardhamanbullion.live"
+        versionCode="10010"
+        android-versionCode="10010"
         version   = "1.0.0">
 
 
-    <name>JR Jewellers(B2B)</name>
+    <name>Vardhaman Gold</name>
 
     <description>
-        JR Jewellers B2B Platform
+        Vardhaman Gold is a renowned company providing Gold and Silver Bullion, Jewellery in India. Established in 
+        Jan 2000, it has grown leaps and bounds and is now a leading company providing competitive rates and impeccable service
     </description>
 
-    <author href="http://www.nemsolutions.com" email="nemsolutions@gmail.com">
+    <author href="http://www.nemsolutions.com" email="amitjain231@gmail.com">
         Amit kumar Jain
     </author>
 
@@ -33,18 +34,31 @@
     </platform>
 	
 	
-	<!-- ANDROID * ANDROID * ANDROID
-	<preference name="SplashScreen" value="screen" />	
-	<preference name="SplashScreenDelay" value="3000"/>	-->
+	<!-- ANDROID * ANDROID * ANDROID -->
+	<preference name="orientation"                	value="portrait" /> 
+	<preference name="AutoHideSplashScreen" value="false" />
+	<preference name="SplashScreen" 			value="screen" />	
+	<preference name="SplashScreenDelay" 	value="3000"/>	
 
 	<icon src="icon.png" platform="android" density="ldpi" />
 	<icon src="icon.png" platform="android" density="mdpi" />
 	<icon src="icon.png" platform="android" density="hdpi" />
 	<icon src="icon.png" platform="android" density="xhdpi" />
 
+	<gap:splash src="splash.png"      	gap:platform="android" gap:qualifier="port-ldpi" />
+    <gap:splash src="splash.png"    		gap:platform="android" gap:qualifier="port-mdpi" />
+    <gap:splash src="splash.png"    		gap:platform="android" gap:qualifier="port-hdpi" />
+    <gap:splash src="splash.png"  		gap:platform="android" gap:qualifier="port-xhdpi" />
+    <gap:splash src="splash.png"         gap:platform="blackberry" />
+    <gap:splash src="splash.png"         gap:platform="ios"     width="320" height="480" />
+    <gap:splash src="splash.png"      	gap:platform="ios"     width="640" height="960" />
+    <gap:splash src="splash.png" 		gap:platform="ios"     width="640" height="1136" />
+    <gap:splash src="splash.png"       	gap:platform="ios"     width="768" height="1024" />
+    <gap:splash src="splash.png"   		gap:platform="ios"     width="1024" height="768" />
+    <gap:splash src="splash.jpg"      	gap:platform="winphone" />
+
 	
-	<!--
-	<splash src="splash.png" platform="android" density="port-ldpi" />
+	<!-- <splash src="splash.png" platform="android" density="port-ldpi" />
 	<splash src="splash.png" platform="android" density="land-ldpi" />
 	<splash src="splash.png" platform="android" density="port-mdpi" />
 	<splash src="splash.png" platform="android" density="land-mdpi" />

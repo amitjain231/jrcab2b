@@ -1,394 +1,770 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
-	<title> JR Jewellers</title>
-	<link rel="stylesheet" type='text/css' href="css/jquerymobile_1.4.5/jquery.mobile-1.4.5.min.css" />
-	<link rel="stylesheet" type='text/css' href="css/jquerymobile_1.4.5/jquery.mobile.structure-1.4.5.min.css" />
-	<link rel="stylesheet" type='text/css' href="css/jquerymobile_1.4.5/jquery.mobile.theme-1.4.5.min.css" />
-	<link rel="stylesheet" type='text/css' href="css/jquerymobile_1.4.5/jquery.mobile.inline-png-1.4.5.min.css" />
-	<link rel="stylesheet" type='text/css' href="css/jquerymobile_1.4.5/jquery.mobile.icons-1.4.5.min.css" />
-	<link rel="stylesheet" type='text/css' href="utilities/photoviewer/dist/photoviewer.min.css" />
-
-	<link rel="stylesheet" type='text/css' href="css/index.css" />
+<head> 
+	<title>Vardhaman Gold</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" 	href="images/favicon.png" ></link>
 	
+	<!--  Needs to be updated before publishing  End -->
+	
+	<!-- Jquery Mobile JS and CSS -->
+	<link rel="stylesheet" type='text/css' href="css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" type='text/css' href="css/jquery.mobile.structure-1.4.5.min.css" />
+	<link rel="stylesheet" type='text/css' href="css/jquery.mobile.theme-1.4.5.min.css" />
+	<link rel="stylesheet" type='text/css' href="css/animate.css-master/animate.min.css" />
+	<link rel="stylesheet" type='text/css' href="css/vgPgGetMobileRates.css?ts=20150116191997" />
+	<link rel='stylesheet' type='text/css' href='css/rupee.css'></link>
 	<link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>	
 	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-</head>
-<body>
-	<div data-role="page" id="page_prodcat" data-theme="a" class="cl_pg_prodcat">
-		<!-- Header -->
+	
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="js/vgPgGetMobileRates.js?ts=20171223141311"></script>
+	
+</head> 
 
-		<div data-role="content" class="cl_div_cont_pg_prodcat" >
-			
-			<div class="ui-grid-a">
-				<div class="ui-block-a">
-						<div class="cl_div_prodcat_cont_wrap">
-							<img class="cl_img_prodcat"
-								src="http://www.sribangarammabullion.com/jrca/productcatalog/master/mobile_home/cat_neck.jpg"  
-								data-launch="PAGENAVIGATION"
-								data-navtopage="#page_prodlisting"	
-								data-key="cat_neck" />
-							<br>Necklace
-						</div>
-				</div>
-				<div class="ui-block-b">
-					<div class="cl_div_prodcat_cont_wrap">
-						<img src="images/generic/star_32x32.png"  class="cl_img_star"/>
-						<img class="cl_img_prodcat"
-							src="http://www.sribangarammabullion.com/jrca/productcatalog/master/mobile_home/cat_chains.jpg"  
-							data-launch="PAGENAVIGATION"
-							data-navtopage="#page_prodlisting2"
-							data-key="cat_chains" />
-						<br>Chains
-					</div>
-				</div>
 
-			</div>
-
-			<div class="ui-grid-a ">
-				<div class="ui-block-a">
-						<div class="cl_div_prodcat_cont_wrap">
-							<img  class="cl_img_prodcat"
-							src="http://www.sribangarammabullion.com/jrca/productcatalog/master/mobile_home/cat_bracelet.jpg"  />
-							<br>Men's Bracelet
-						</div>	
-				</div>
-				<div class="ui-block-b">
-						<div class="cl_div_prodcat_cont_wrap">
-							<img class="cl_img_prodcat"
-							src="http://www.sribangarammabullion.com/jrca/productcatalog/master/mobile_home/cat_bangles.jpg"  />
-							<br>Bangles
-						</div>
-				</div>
-			</div>
-
-			<div class="ui-grid-a ">
-				<div class="ui-block-a">
-						<div class="cl_div_prodcat_cont_wrap">
-							<img src="images/generic/star_32x32.png"  class="cl_img_star"/>
-							<img class="cl_img_prodcat"
-							src="http://www.sribangarammabullion.com/jrca/productcatalog/master/mobile_home/cat_vanki.jpg"  />
-							<br>Vanki
-						</div>
-				</div>
-				<div class="ui-block-b">
-						<div class="cl_div_prodcat_cont_wrap">
-							<img class="cl_img_prodcat"
-							src="http://www.sribangarammabullion.com/jrca/productcatalog/master/mobile_home/cat_choker.jpg"  />
-							<br>Choker
-						</div>
-				</div>
-			</div>
-		</div>		
-	</div>		<!-- Page - Product Category -->
-
+<body onload="initApp();">
+	<input type="hidden" id="id_hid_mob_param1" 		value="0" />
+	<input type="hidden" id="id_hid_mob_param2" 		value="0" />
+	<input type="hidden" id="id_hid_mob_param3" 		value="0" />
+	<input type="hidden" id="id_hid_mob_param4" 		value="0" />
+	<input type="hidden" id="id_hid_mob_param5" 		value="0" />
+	<input type="hidden" id="id_hid_mob_param6" 		value="0" />
+	<input type="hidden" id="id_hid_mob_param7" 		value="0" />
+	<input type="hidden" id="id_hid_mob_param8" 		value="0" />
+	<input type="hidden" id="id_hid_mob_param9" 		value="0" />
+	<input type="hidden" id="id_hid_mob_param10" 		value="0" />
+	<input type="hidden" id="id_hid_mob_param11" 		value="0" />
+	<input type="hidden" id="id_hid_mob_param12" 		value="0" />
+	<input type="hidden" id="id_hid_mob_param13" 		value="0" />
+	<input type="hidden" id="id_hid_mob_param14" 		value="0" />
+	<input type="hidden" id="id_hid_mob_param15" 		value="0" />
 	
 
-
-	<div data-role="page" id="page_prodlisting" data-theme="a" class="cl_pg_prodlisting">
-		<div data-role="content" class="cl_div_cont_pg_prodlisting" >
-			<div class="ui-grid-solo">
-				<div class="ui-block-a">
-						<table class="cl_tbl_prodlist_nav_icons">
-							<tr>
-								<td>
-									<img src="images/generic/logoff_32x32.png" 
-											data-launch="MENUNAVIGATION"
-											data-navtopage="#page_prodcat"
-										/>
-								</td>
-								<td>
-									<img src="images/generic/back_32x32.png" 
-										data-launch="MENUNAVIGATION"
-										data-navtopage="#page_prodcat"
-										/>
-								</td>
-								<td>
-									<img src="images/generic/home_32x32.png" 
-										data-launch="MENUNAVIGATION"
-										data-navtopage="#page_prodcat"
-									/>			
-								</td>
-							</tr>
-
-						</table>
-						
-				</div>
-			</div>		<!-- ui-grid-solo -->
-
-			<div class="ui-grid-solo">
-				<div class="ui-block-a">
-						<h1>Product Listing for Necklace</h1>
-				</div>		
-			</div>		<!-- <div class="ui-grid-solo"> -->
-
-			 <div class="ui-grid-a">
-				<div class="ui-block-a">
-						<div class="cl_div_prodlist_cont_wrap">
-							<img class="cl_img_prodcat"
-								src="http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK101.jpg" 
-									data-launch="PRODUCTDETAIL"
-									data-navtopage="#page_proddetail"
-									data-key="NK01"
-									data-src="http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK101.jpg"
-									data-wt="26.255 gms"
-									data-price = "86.5"
-								/>
-
-							<table class="cl_tbl_prodlisting">
-								<tr>
-									<td>NK101</td>
-									<td>26.255 gms</td>
-									<td>
-										<img src="images/generic/gallery_32x32.png" class="cl_img_gallery" 
-											data-launch="GALLERY"
-											data-title="NK01"
-											data-src="http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK101.jpg"
-											data-wt="26.255 gms"
-											/>
-									</td>
-								</tr>
-							</table>
-						</div>			<!-- cl_div_prodlist_cont_wrap -->
-				</div>					<!-- ui-block-a -->
-				<div class="ui-block-b">
-					<div class="cl_div_prodlist_cont_wrap">
-						<img src="images/generic/star_32x32.png"  class="cl_img_star"/>
-						<img class="cl_img_prodcat"
-							src="http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK102.jpg" 
-								data-launch="PRODUCTDETAIL"
-								data-navtopage="#page_proddetail"
-								data-key="NK02"
-								data-src="http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK102.jpg"
-								data-wt="24.100 gms"
-							/>
-						<table class="cl_tbl_prodlisting">
-								<tr>
-									<td>NK102</td>
-									<td>24.100 gms</td>
-									<td>
-										<img src="images/generic/gallery_32x32.png" class="cl_img_gallery" 
-											data-launch="GALLERY"
-											data-title="NK02"
-											data-src="http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK102.jpg"
-											data-wt="24.100 gms"
-											/>
-									</td>
-								</tr>
-							</table>
-
-					</div>			<!-- cl_div_prodlist_cont_wrap -->
-				</div>	<!-- ui-block-b -->
-
-
-			</div>		<!-- ui-grid-a -->
-			
-			<div class="ui-grid-a">
-				<div class="ui-block-a">
-						<div class="cl_div_prodlist_cont_wrap">
-							<img src="images/generic/star_32x32.png"  class="cl_img_star"/>
-							<img class="cl_img_prodcat"
-								src="http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK103.jpg" 
-									data-launch="PRODUCTDETAIL"
-									data-navtopage="#page_proddetail"
-									data-key="NK03"
-									data-src="http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK103.jpg"
-									data-wt="22.652 gms"
-								/>
-							<table class="cl_tbl_prodlisting">
-								<tr>
-									<td>NK103</td>
-									<td>22.652 gms</td>
-									<td>
-										<img src="images/generic/gallery_32x32.png" class="cl_img_gallery" 
-											data-launch="GALLERY"
-											data-title="NK03"
-											data-src="http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK103.jpg"
-											data-wt="22.652 gms"
-										/>
-									</td>
-								</tr>
-							</table>
-						</div>
-				</div>
-				<div class="ui-block-b">
-					<div class="cl_div_prodlist_cont_wrap">
-							<img class="cl_img_prodcat"
-								src="http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK104.jpg" 
-									data-launch="PRODUCTDETAIL"
-									data-navtopage="#page_proddetail"
-									data-key="NK04"
-									data-src="http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK104.jpg"
-									data-wt="28.245 gms"
-								/>
-							<table class="cl_tbl_prodlisting">
-								<tr>
-									<td>NK104</td>
-									<td>28.245 gms</td>
-									<td>
-										<img src="images/generic/gallery_32x32.png" class="cl_img_gallery" 
-											data-launch="GALLERY"
-											data-title="NK04"
-											data-src="http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK104.jpg"
-											data-wt="28.245 gms"
-										/>
-									</td>
-								</tr>
-							</table>
-						</div>		<!-- cl_div_prodlist_cont_wrap -->
-					</div>			<!-- ui-block-b -->
-			</div>		<!-- ui-grid-a -->
-			
-			<div class="ui-grid-a">
-				<div class="ui-block-a">
-						<div class="cl_div_prodlist_cont_wrap">
-							<img class="cl_img_prodcat"
-								src="http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK105.jpg" 
-									data-launch="PRODUCTDETAIL"
-									data-navtopage="#page_proddetail"
-									data-key="NK05"
-									data-src="http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK105.jpg"
-									data-wt="25.250 gms"
-								/>
-							<table class="cl_tbl_prodlisting">
-								<tr>
-									<td>NK105</td>
-									<td>25.250 gms</td>
-									<td>
-										<img src="images/generic/gallery_32x32.png" class="cl_img_gallery" 
-											data-launch="GALLERY"
-											data-title="NK03"
-											data-src="http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK105.jpg"
-											data-wt="25.250 gms"
-										/>
-									</td>
-								</tr>
-							</table>
-						</div>			<!-- cl_div_prodlist_cont_wrap -->
-				</div>					<!-- ui-block-a -->
-				<div class="ui-block-b">
-					<div class="cl_div_prodlist_cont_wrap">
-							<img class="cl_img_prodcat"
-								src="http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK106.jpg" 
-									data-launch="PRODUCTDETAIL"
-									data-navtopage="#page_proddetail"
-									data-key="NK06"
-									data-src="http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK106.jpg"
-									data-wt="32.211 gms"
-								/>
-							<table class="cl_tbl_prodlisting">
-								<tr>
-									<td>NK106</td>
-									<td>32.211 gms</td>
-									<td>
-										<img src="images/generic/gallery_32x32.png" class="cl_img_gallery" 
-											data-launch="GALLERY"
-											data-title="NK06"
-											data-src="http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK106.jpg"
-											data-wt="32.211 gms"
-										/>
-									</td>
-								</tr>
-							</table>
-						</div>		<!-- cl_div_prodlist_cont_wrap -->
-					</div> 			<!-- ui-block-b -->
-
-				</div>			<!-- ui-grid-a -->
-
-
-		</div>		<!-- <div data-role="content" -->
-
-	</div>		<!-- Page - page_prodlisting -->
-
 	
+<div data-role="page" id="mainpage" data-theme="b" class="cl_VBMainPage">
+	
+	<!-- <div class="cl_my_header" style="font-family: Montserrat; background-color: black;text-align: center"> 
+			<img src="images/VG_Logo.png"  />
+	</div> -->
 
-	<div data-role="page" id="page_proddetail" data-theme="a" class="cl_pg_proddetail">
-		<div data-role="content" class="cl_div_cont_pg_proddetail" >
-			<div class="ui-grid-solo">
-				<div class="ui-block-a">
-					<table class="cl_tbl_prodlist_nav_icons">
-							<tr>
-								<td>
-									<img src="images/generic/logoff_32x32.png" 
-											data-launch="MENUNAVIGATION"
-											data-navtopage="#page_prodcat"
-										/>
-								</td>
-								<td>
-									<img src="images/generic/back_32x32.png" 
-										data-launch="MENUNAVIGATION"
-										data-navtopage="#page_prodlisting"
-										/>
-								</td>
-								<td>
-									<img src="images/generic/home_32x32.png" 
-										data-launch="MENUNAVIGATION"
-										data-navtopage="#page_prodcat"
-									/>			
-								</td>
-							</tr>
-
-						</table>
-
-				</div>			<!-- ui-block-a -->
-			</div>		<!-- ui-grid-solo -->
-
-
-			<div class="ui-grid-solo" class="cl_div_proddetail_block2">	
-				<div class="ui-block-a" style="text-align: center;">
-					<img 
-						style="width: 300px; height: 300px;border:1px solid white; border-radius: 10px;"
-						src = "http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK101.jpg" 
-						data-launch="SHOWBHAV" />
-						<table class="cl_tbl_proddetail" >
-							<tr>
-								<td colspan="2">
-									<img src="images/generic/gallery_32x32.png" class="cl_img_gallery" 
-											data-launch="SHOWIMAGE"
-											data-title="NK01"
-											data-src="http://www.sribangarammabullion.com/jrca/productcatalog/cat_neck/NK101.jpg"
-											data-wt="26.255 gms"
-											/>
-								</td>
-
-							</tr>
-							<tr>
-								<td> Item code:</td>
-								<td> NK01</td>
-							</tr>
-							<tr>
-								<td> Item text:</td>
-								<td> Necklace</td>
-							</tr>
-							<tr>
-								<td> Item desc: </td>
-								<td> Necklace with studded CZ Stone and enamel</td>
-							</tr>
-							<tr>
-								<td> Item weight:</td>
-								<td> 26.255 gms</td>
-							</tr>
-							<tr class="cl_tr_proddetail_bhav">
-								<td> Bhav</td>
-								<td> <span id="id_span_proddetail_bhav">86.5 Touch</span></td>
-							</tr>
-						</table>
-
-						
-				</div>			<!-- ui-block-a -->	
-			</div>		<!-- ui-grid-solo -->				
+	<div data-role="header" data-theme="b" 
+		data-position="fixed" 
+		data-tap-toggle="false"	
+		class=" cl_vb_header">
+		
+		<!-- <div style="font-family: Montserrat;"> Vardhaman Gold </div> -->
+		<div class="cl_my_header" style="font-family: Montserrat; "> 
+			<img src="images/VG_Logo.png"  />
+	</div>
+		
+	</div>
+	
+	
+	<div data-role="content" style="padding-top:0px;">
+		
+		<!-- Load spinner -->
+		<div class="cl_spin_loader_wrapper">	
+			<div class="cl_spin_loader"></div>
+		</div>
 				
+		<!-- <div class="ui-grid-solo cl_div_grid_nostream" id="id_div_grid_nostream">
+			
+			<div class="ui-block-a cl_td_block_nostream" >
+				<div class='cl_div_stream_off'>
+					Data Streaming is <span style='color:#E35E1B'>off... </span> 
+				</div>
+			</div>
+		
+		</div> -->
+		
+		<!-- Separator -->
+		<div class="ui-grid-solo" style="margin: 3px 0px;"></div>
+		
+		<div class="ui-grid-b cl_div_grid_comex_wrapper animated fadeIn" id="id_div_grid_comex">
+			<div class="ui-block-a cl_div_symbol_xauusd_ask cl_div_bk_sym_xauusd_ask" >
+				<table class="cl_vb_tbl_comex_data">
+					<tr>
+						<td colspan='2' class="cl_td_comex_hdg_xau" id="id_td_comex_label_xau">
+							&nbsp;
+						</td>
+					</tr>						
+					<tr>
+						<td class="cl_vb_td_comex_dollar ">$</td>
+						<td class="cl_vb_td_comex_rate"> <span id="id_span_data_comex_g_ask">&nbsp;</span> </td>
+					</tr>
+					<tr>
+						<table class="cl_tbl_spot_hl">
+								<tr>
+									<td>H: <span id="id_span_data_comex_g_high">&nbsp;</span></td>
+									<td> L : <span id="id_span_data_comex_g_low">&nbsp;</span></td>	
+								</tr>
+							</table>	
+					</tr>
+				</table>
+			</div>
+			<div class='ui-block-b cl_div_symbol_xagusd_ask cl_div_bk_sym_xagusd_ask' >
+				<table class="cl_vb_tbl_comex_data">
+					<tr>
+						<td colspan='2' class="cl_td_comex_hdg_xag" id="id_td_comex_label_xag">
+							&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td class="cl_vb_td_comex_dollar">$</td>
+						<td class="cl_vb_td_comex_rate"> <span id="id_span_data_comex_s_ask">&nbsp;</span> </td>
+					</tr>
+					<tr>
+						<table class="cl_tbl_spot_hl">
+								<tr>
+									<td>H: <span id="id_span_data_comex_s_high">&nbsp;</span></td>
+									<td> L : <span id="id_span_data_comex_s_low">&nbsp;</span></td>	
+								</tr>
+							</table>	
+					</tr>
+				</table>
+				
+			</div>	
+			<div class='ui-block-c cl_div_symbol_usdinr_ask cl_div_bk_sym_usdinr_ask' >
+				<table class="cl_vb_tbl_comex_data">
+					<tr>
+						<td colspan='2' class="cl_td_comex_hdg_usd" id="id_td_comex_label_usd">
+							&nbsp;
+						</td>
+					</tr>
+					<tr>
+						<td class="cl_vb_td_comex_rupee ">Rs.</td>
+						<td class="cl_vb_td_comex_rate"> <span id="id_span_data_comex_u_ask">&nbsp;</span> </td>
+					</tr>
+					<tr>
+						<table class="cl_tbl_spot_hl">
+								<tr>
+									<td>H: <span id="id_span_data_comex_u_high">&nbsp;</span></td>
+									<td> L : <span id="id_span_data_comex_u_low">&nbsp;</span></td>	
+								</tr>
+							</table>	
+					</tr>
+				</table>
+			</div>
+			
+		</div>
+			
+			
+		<!-- Separator -->
+		<div class="ui-grid-solo" style="margin: 5px 0px;"></div>	
+			
+		<div class="ui-grid-solo cl_div_grid_symbol_wrapper animated fadeIn">			
+			<div class="ui-block-a cl_div_bullion_hdg" >				
+					Symbols
+			</div>		
+		</div>
 
-		</div>		<!-- content -->
-	</div>		<!-- page_proddetail -->
+
+
+
+		<div class="ui-grid-a cl_div_grid_symbol_wrapper animated fadeIn" id="id_div_grid_g999r">
+			<div class="ui-block-a cl_symbol_label_g" id="id_div_rate_label_g999r">
+				&nbsp;
+			</div>
+			<div class="ui-block-b cl_sym_bkcolor_g999r">
+				<table class="cl_vb_tbl_symbol_rate_data">
+					<tr>
+						<td class="cl_vb_td_symbol_rupee ">Rs.</td>						
+						<td>
+							<span id="id_span_data_g999r_ask">&nbsp;</span>
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+			
+		</div>
+		
+		<div class="ui-grid-a cl_div_grid_symbol_wrapper animated fadeIn" id="id_div_grid_g999t">
+			<div class="ui-block-a cl_symbol_label_g"  id="id_div_rate_label_g999t">
+				&nbsp;
+			</div>
+			<div class="ui-block-b cl_sym_bkcolor_g999t" >
+				<table class="cl_vb_tbl_symbol_rate_data">
+					<tr>
+						<td class="cl_vb_td_symbol_rupee ">Rs.</td>
+						
+						<td>
+							<span id="id_span_data_g999t_ask">&nbsp;</span>
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+			
+		</div>	
+		
+		<div class="ui-grid-a cl_div_grid_symbol_wrapper animated fadeIn" id="id_div_grid_gft999r">
+			<div class="ui-block-a cl_symbol_label_g" id="id_div_rate_label_gft999r" >
+				&nbsp;
+			</div>
+			<div class="ui-block-b cl_sym_bkcolor_gft999r" >
+				<table class="cl_vb_tbl_symbol_rate_data">
+					<tr>
+						<td class="cl_vb_td_symbol_rupee ">Rs.</td>
+						
+						<td>
+							<span id="id_span_data_gft999r_ask">&nbsp;</span>
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+			
+		</div>
+		
+		<div class="ui-grid-a cl_div_grid_symbol_wrapper animated fadeIn" id="id_div_grid_gft999t">
+			<div class="ui-block-a cl_symbol_label_g" id="id_div_rate_label_gft999t" >
+				&nbsp;
+			</div>
+			<div class="ui-block-b cl_sym_bkcolor_gft999t" >
+				<table class="cl_vb_tbl_symbol_rate_data">
+					<tr>
+						<td class="cl_vb_td_symbol_rupee ">Rs.</td>
+						
+						<td>
+							<span id="id_span_data_gft999t_ask">&nbsp;</span>
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+			
+		</div>
+		
+		
+		
+		<!-- Separator -->
+		<div class="ui-grid-solo" style="margin: 5px 0px;"></div>
+		
+		
+
+		
+		<div class="ui-grid-a cl_div_grid_symbol_wrapper animated fadeIn" id="id_div_grid_s999r">
+			<div class="ui-block-a cl_symbol_label_s" id="id_div_rate_label_s999r" >
+				&nbsp;
+			</div>
+			<div class="ui-block-b cl_sym_bkcolor_s999r" >
+				<table class="cl_vb_tbl_symbol_rate_data">
+					<tr>
+						<td class="cl_vb_td_symbol_rupee ">Rs.</td>
+						
+						<td>
+							<span id="id_span_data_s999r_ask">&nbsp;</span>
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+			
+		</div>
+		<div class="ui-grid-a cl_div_grid_symbol_wrapper animated fadeIn" id="id_div_grid_s999t">
+			<div class="ui-block-a cl_symbol_label_s" id="id_div_rate_label_s999t" >
+				&nbsp;
+			</div>
+			<div class="ui-block-b cl_sym_bkcolor_s999t" >
+				<table class="cl_vb_tbl_symbol_rate_data">
+					<tr>
+						<td class="cl_vb_td_symbol_rupee ">Rs.</td>
+						
+						<td>
+							<span id="id_span_data_s999t_ask">&nbsp;</span>
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+			
+		</div>
+		
+		<!-- Separator -->
+		<div class="ui-grid-solo" style="margin: 2vh 0px;"></div>	
+
+		<div class="cl_div_grid_futnxt_wrapper animated fadeIn">
+			<div class="ui-grid-solo">
+				<div class="ui-block-a cl_div_bullion_hdg" >
+						Futures
+				</div>
+			</div>
+			
+			<div class="ui-grid-b cl_div_futnxt_grid_hdg" style="background-color: black;" >
+				<div class="ui-block-a">
+					&nbsp;
+				</div>
+				<div class="ui-block-b" >
+					<span> Bid </span> 
+				</div>
+				<div class="ui-block-c" >
+					<span> Ask </span> 
+				</div>
+			</div>
+
+			<!-- Futures - Gold Futures -->					
+			<div class="ui-grid-b cl_div_grid_gfut_row" >
+				<div class="ui-block-a cl_symbol_label_g" id="id_div_futnxt_gfut">
+					<span id="id_span_gfut_descr">&nbsp;</span>
+				</div>
+				
+				<div class="ui-block-b" >
+					<table class="cl_tbl_futnxt_rates">
+						<tr>
+							<td><span id="id_span_gfut_bid">&nbsp;</span></td>							
+						</tr>
+						<tr>
+							<td>H: &nbsp; <span id="id_span_gfut_high">&nbsp;</span></td>
+						</tr>
+					</table>					
+				</div>
+
+				<div class="ui-block-c" >					
+					<table class="cl_tbl_futnxt_rates">
+						<tr>
+							<td><span id="id_span_gfut_ask">&nbsp;</span></td>							
+						</tr>
+						<tr>
+							<td>L: &nbsp; <span id="id_span_gfut_low">&nbsp;</span></td>
+						</tr>
+					</table>					
+				</div>
+			</div>			
+
+			<!-- Futures - Silver Futures -->	
+			<div class="ui-grid-b  cl_div_grid_sfut_row">
+				<div class="ui-block-a cl_symbol_label_s" id="id_div_futnxt_sfut">
+					<span id="id_span_sfut_descr">&nbsp;</span>
+				</div>
+				
+				<div class="ui-block-b" >
+					<table class="cl_tbl_futnxt_rates">
+						<tr>
+							<td><span id="id_span_sfut_bid">&nbsp;</span></td>							
+						</tr>
+						<tr>
+							<td>H: &nbsp; <span id="id_span_sfut_high">&nbsp;</span></td>
+						</tr>
+					</table>					
+				</div>
+
+				<div class="ui-block-c" >					
+					<table class="cl_tbl_futnxt_rates">
+						<tr>
+							<td><span id="id_span_sfut_ask">&nbsp;</span></td>							
+						</tr>
+						<tr>
+							<td>L: &nbsp; <span id="id_span_sfut_low">&nbsp;</span></td>
+						</tr>
+					</table>					
+				</div>
+			</div>	
+			
+			<!-- Futures  Gold Next -->
+			<div class="ui-grid-b  cl_div_grid_gnxt_row">
+				<div class="ui-block-a cl_symbol_label_g" id="id_div_futnxt_gnxt">
+					<span id="id_span_gnxt_descr">&nbsp;</span>
+				</div>
+				
+				<div class="ui-block-b" >
+					<table class="cl_tbl_futnxt_rates">
+						<tr>
+							<td><span id="id_span_gnxt_bid">&nbsp;</span></td>							
+						</tr>
+						<tr>
+							<td>H: &nbsp; <span id="id_span_gnxt_high">&nbsp;</span></td>
+						</tr>
+					</table>					
+				</div>
+
+				<div class="ui-block-c" >					
+					<table class="cl_tbl_futnxt_rates">
+						<tr>
+							<td><span id="id_span_gnxt_ask">&nbsp;</span></td>							
+						</tr>
+						<tr>
+							<td>L: &nbsp; <span id="id_span_gnxt_low">&nbsp;</span></td>
+						</tr>
+					</table>					
+				</div>
+			</div>	
+
+			<!-- Futures  Silver Next -->
+			<div class="ui-grid-b  cl_div_grid_snxt_row">
+				<div class="ui-block-a cl_symbol_label_s" id="id_div_futnxt_snxt">
+					<span id="id_span_snxt_descr">&nbsp;</span>
+				</div>
+				
+				<div class="ui-block-b" >
+					<table class="cl_tbl_futnxt_rates">
+						<tr>
+							<td><span id="id_span_snxt_bid">&nbsp;</span></td>							
+						</tr>
+						<tr>
+							<td>H: &nbsp; <span id="id_span_snxt_high">&nbsp;</span></td>
+						</tr>
+					</table>					
+				</div>
+
+				<div class="ui-block-c" >					
+					<table class="cl_tbl_futnxt_rates">
+						<tr>
+							<td><span id="id_span_snxt_ask">&nbsp;</span></td>							
+						</tr>
+						<tr>
+							<td>L: &nbsp; <span id="id_span_snxt_low">&nbsp;</span></td>
+						</tr>
+					</table>					
+				</div>
+			</div>
+
+
+		</div>	<!-- Close cl_div_grid_futnxt_wrapper -->
+
+		<!-- Separator -->
+		<div class="ui-grid-solo" style="margin: 2vh 0px;"></div>
+
+		<div class="cl_div_grid_orna_wrapper">
+
+			<div class="ui-grid-solo  animated fadeIn">			
+				<div class="ui-block-a cl_div_bullion_hdg" >				
+						Ornament Rates
+				</div>		
+			</div>	
+
+			<div class="ui-grid-b animated fadeIn" style="background-color: black;" >
+				<div class="ui-block-a">
+					&nbsp;
+				</div>
+				<div class="ui-block-b " >
+					<span style="font-size: 10pt;"> GST </span> 
+					<span style="font-size: 8pt; color: #21e81e;font-weight: bold;"> Inclusive </span> 					
+				</div>
+				<div class="ui-block-c " >
+					<span style="font-size: 10pt;"> GST </span> 
+					<span style="font-size: 8pt; color: #ff9c22; font-weight: bold;"> Exclusive </span> 		
+				</div>
+			</div>
+
+			<div class="ui-grid-b  animated fadeIn"  id="id_div_grid_g916">
+				<div class="ui-block-a cl_symbol_label_g" id="id_div_rate_label_g916" style="font-size:1.25vh;">
+					&nbsp;				
+				</div>
+				<div class="ui-block-b cl_sym_bkcolor_orna_g916" >
+					<table class="cl_vb_tbl_ornasymbol_rate_data">
+						<tr>
+							<td class="cl_vb_td_ornasymbol_rupee ">Rs.</td>							
+							<td>
+								<span id="id_span_data_orna_g916_incl">&nbsp;</span>
+							</td>
+						</tr>
+					</table>
+					
+				</div>
+				<div class="ui-block-c cl_sym_bkcolor_orna_g916" >
+					<table class="cl_vb_tbl_ornasymbol_rate_data">
+						<tr>
+							<td class="cl_vb_td_ornasymbol_rupee ">Rs.</td>							
+							<td>
+								<span id="id_span_data_orna_g916_excl">&nbsp;</span>
+							</td>
+						</tr>
+					</table>					
+				</div>
+			</div>
+
+			<div class="ui-grid-b  animated fadeIn" id="id_div_grid_s925">
+				<div class="ui-block-a cl_symbol_label_s" id="id_div_rate_label_s925"  style="font-size:1.25vh;">
+					&nbsp;				
+				</div>
+				<div class="ui-block-b cl_sym_bkcolor_orna_s925" >
+					<table class="cl_vb_tbl_ornasymbol_rate_data">
+						<tr>
+							<td class="cl_vb_td_ornasymbol_rupee ">Rs.</td>
+							
+							<td>
+								<span id="id_span_data_orna_s925_incl">&nbsp;</span>
+							</td>
+						</tr>
+					</table>
+					
+				</div>
+				<div class="ui-block-c cl_sym_bkcolor_orna_s925" >
+					<table class="cl_vb_tbl_ornasymbol_rate_data">
+						<tr>
+							<td class="cl_vb_td_ornasymbol_rupee ">Rs.</td>
+							
+							<td>
+								<span id="id_span_data_orna_s925_excl">&nbsp;</span>
+							</td>
+						</tr>
+					</table>
+					
+				</div>
+			</div>	<!-- Close for ui-grid-b -->
+		</div>	<!-- Close cl_div_grid_orna_wrapper -->
+
+
+		<!-- Update App -->
+		<div class="ui-grid-solo cl_div_updateapp" id="id_div_updateapp" >
+			<span style="color: black; font-size: 10pt;">Update App</span>			
+		</div>
+		
+		
+		
+		
+		<div data-role="popup" id="UpdateApppopup" class="ui-content" 
+			data-overlay-theme="b" style="background-color: #F2AB11;">
+		
+			<a href="#" data-rel="back" data-role="button"  data-theme="b" 
+			data-icon="delete" data-iconpos="notext" class="ui-btn-right">&nbsp;</a>
+			
+			<div data-role="header" data-theme="a">
+				<h1>Update App</h1>
+			</div><!-- /header -->
+
+			<div data-role="content" data-theme="a">	
+				<p style="font-size: 10pt;"> Dear Customer, Please update latest version of this App from Store to enjoy new features. </p>
+				
+				<a href="#" id="id_playstore" data-role="button" data-theme="b"					
+					onclick="javascript:window.open('market://details?id=com.phonegap.vardhamanbullion.live')">
+					Playstore
+				</a>
+				
+			</div><!-- /content -->
+			
+		</div><!-- /page popup -->
+	   
+	   
+   
+	</div><!-- /content -->
+
 	
+	
+	<!--               Footer           -->
+	<div data-role="footer" data-position="fixed" 
+		data-tap-toggle="false"
+		data-iconpos="bottom">
+		
+		<div class="cl_vb_div_outer_marquee">
+			<marquee
+				direction=left
+				scrolldelay="150"  
+				onmouseover="this.stop();" 
+				onmouseout="this.start();" 
+				class="cl_marq_scrollMsg"
+				id="id_scroll_marq" >
+			</marquee>
+		</div>		
+		
+		<div data-role="navbar"  class="custom-navbar">
+			<ul>
+				<li><a id="id_a_vb_booking" href="#" data-icon="phone" 
+					data-position-to="window" data-rel="popup" class="ui-btn ui-btn-inline">
+						<span class="cl_span_footernav_menuitem">Booking </span>
+					</a></li>
+				<li><a id="id_a_vb_contact" href="#" data-icon="user" 
+					data-position-to="window" data-rel="popup" class="ui-btn ui-btn-inline" >
+						<span class="cl_span_footernav_menuitem">Contact</span>
+					</a></li>
+				<li><a id="id_a_vb_rtgs" href="#" data-icon="location" 
+					data-position-to="window" data-rel="popup" class="ui-btn ui-btn-inline" >
+						<span class="cl_span_footernav_menuitem">RTGS</span>
+					</a></li>
+			</ul>
+		</div>
+		
+		<div style="background-color: #052F5C;">
+			<div class="ui-grid-a">
+				<div class="ui-block-a cl_vb_div_footer_copyright">
+					Copyright &copy 
+					<script type='text/javascript'>document.write( new Date().getFullYear());</script>
+					by Vardhaman Gold
+				</div>
+				
+				<div class="ui-block-b cl_vb_divPoweredBy">
+					Powered by Nem Solutions
+				</div>
+				
+			</div>
+		</div>
 
-	<!-- <script src="js/jquery_3.4.1/jquery-3.4.1.min.js"></script> -->
-	<script src="js/jquery_2.1.4/jquery-2.1.4.min.js"></script>
-	<script src="js/jquerymobile_1.4.5/jquery.mobile-1.4.5.min.js"></script>
-	<script src="utilities/photoviewer/dist/photoviewer.min.js"></script>
-	<script src="js/index.js"></script>
+		
+		<div data-role="popup" id="myPopupBooking" class="ui-content" 
+			data-overlay-theme="b" style="background-color: #47484A;">
+		
+		  <a href="#" data-rel="back" data-role="button"  data-theme="b" 
+			data-icon="delete" data-iconpos="notext" class="ui-btn-right">&nbsp;</a>
+			
+			<p style="color:black; background-color: #FAF8A2;padding: 10px;">Booking Contact 
+				<span style="font-family: Roboto Slab, arial; font-size: 6pt;color:blue;"> (Touch to Call)</span> </p>
+				<table style="margin: 0px;">
+					<tr>
+						<td> 
+							<a href="#" data-role="button" data-icon="phone" data-iconpos="notext">&nbsp;</a>
+						</td>
+						
+						<td> &nbsp; 
+							<a style="font-family: Roboto Slab, arial; font-size: 10pt; color: #ff7142; text-decoration: none;" href="tel:08666664488">+91 866 661 8844</a>
+						</td>
+						<td>&nbsp;</td>
+					</tr>
+				
+					<tr>
+						<td> 
+							<a href="#" data-role="button" data-icon="phone" data-iconpos="notext">&nbsp;</a>					
+						</td>
+					
+						<td> &nbsp;
+							<a style="font-family: Roboto Slab, arial; font-size: 10pt; color: #ff7142;text-decoration: none;" href="tel:9440943890">+91 9440943890</a></td>
+						
+						<td>
+							<span style="font-family: Roboto Slab, arial;font-size: 8pt; color: white;">(Basant Lal Jain) </span>
+						</td>	
+					
+					</tr>	
+				
+					<tr>
+						<td> 
+							<a href="#" data-role="button" data-icon="user" data-iconpos="notext">&nbsp;</a>					
+						</td>
+							
+						<td> &nbsp; 
+							<a style="font-family: Roboto Slab, arial; font-size: 10pt; color: #ff7142;text-decoration: none;" href="tel:9701918241">+91 9701918241</a></td>
+					
+						<td>
+							<span style="font-family: Roboto Slab, arial; font-size: 8pt; color: white;">(Amit kumar Jain)</span> 
+						</td>
+					</tr>	
+					
+				</table>
+
+		</div> <!--   myPopupBooking   -->
+		
+		
+		<div data-role="popup" id="myPopupContact" class="ui-content" 
+			data-overlay-theme="b" style="background-color: #E66510;">
+			
+			  <a href="#" data-rel="back" data-role="button"  data-theme="b" 
+				data-icon="delete" data-iconpos="notext" class="ui-btn-right">&nbsp;</a>
+		
+				<table>
+					<tr>
+						<td > 
+							<a href="#" data-role="button" data-icon="location" data-iconpos="notext">&nbsp;</a>
+							
+						</td>
+						<td vertical-align='middle'>
+							<span style="font-style: verdana; font-size: 15pt; font-weight: bold; vertical-align:middle;">
+							Registered Office</span></td>
+						
+					</tr>
+					<tr>
+						<td colspan=2 style="color:black; font-size: 12pt;font-family: Montserrat;"> Vardhaman Gold</td>
+					</tr>
+					<tr>
+						<td colspan=2 style="color:yellow; font-size: 10pt;font-family: sans-serif;"> 27-14-16, Jaihind Complex, EV Plaza</td>						
+					</tr>
+					<tr>
+						<td colspan=2 style="color:yellow; font-size: 10pt;font-family: sans-serif;"> 2nd Floor, Rajagopalachari Street,</td>
+					</tr>
+					<tr>
+						<td colspan=2 style="color:yellow; font-size: 10pt;font-family: sans-serif;"> Governorpet, Vijayawada</td>
+					</tr>
+					<tr>
+						<td colspan=2 style="color:yellow; font-size: 10pt;font-family: sans-serif;">Andhra Pradesh 520002, India</td>
+					</tr>
+					
+				
+				</table>
+				
+				<hr />
+				
+				<table>
+					
+					<tr>
+						<td> 
+							<a href="#" data-role="button" data-icon="mail" data-iconpos="notext">&nbsp;</a>
+						</td>
+						<td> 
+							<span class="cl_span_contact_email"> vardhamangoldglobal@gmail.com</span>
+						</td>
+					</tr>
+					
+				</table>	
+				
+				<!--
+				<div style="width:200px; height: 100px;border: 0px; margin: 0px auto;" id="id_cu_ifrm_googlemap" >
+					
+				</div>
+				-->	
+		</div> <!--   myPopupContact   -->
+		
+		
+		<div data-role="popup" id="myPopupRTGS" class="ui-content" 
+			data-overlay-theme="b" style="padding: 5px 30px;background-color: #BA0D5E;">
+			
+			  <a href="#" data-rel="back" data-role="button"  data-theme="b" 
+				data-icon="delete" data-iconpos="notext" class="ui-btn-right">&nbsp;</a>
+		
+				<table class="cl_tbl_bankinfo" > 
+					<tr>
+						<td> 
+						
+							<a href="#" data-role="button" data-icon="home" data-iconpos="notext">&nbsp;</a>
+							
+						</td>
+						<td vertical-align='middle'>
+							<span style="padding-left:10px;font-size: 14pt; font-weight: bold; vertical-align:middle;">
+							Bank Details
+							</span>
+						</td>
+						
+					</tr>
+					
+					<tr>
+						<td colspan=2> <hr /> </td>
+					</tr>
+					<tr>
+						<td class="cl_td_banklabel"> Bank:</td>
+						<td class="cl_td_bankdata"> <span style="color:yellow;">Axis Bank</span></td>
+					</tr>
+					<tr>
+						<td class="cl_td_banklabel"> Branch:</td>
+						<td class="cl_td_bankdata"> One Town Branch</td>
+					</tr>
+					<tr>
+						<td class="cl_td_banklabel"> Name:</td>
+						<td class="cl_td_bankdata"> Vardhaman Gold</td>
+					</tr>
+					<tr>
+						<td class="cl_td_banklabel"> Account:</td>
+						<td class="cl_td_bankdata"> 913020050737711</td>
+					</tr>
+					<tr>
+						<td class="cl_td_banklabel"> IFSC:</td>
+						<td class="cl_td_bankdata"> UTIB0000555</td>
+					</tr>
+					
+					<tr>
+						<td colspan=2> <hr /> </td>
+					</tr>
+				</table>
+				
+				
+		</div> <!--   myPopupContact   -->
+		
+		
+		
+	</div>
+	
+	
+</div><!-- /page -->
+
+	
 </body>
 </html>
